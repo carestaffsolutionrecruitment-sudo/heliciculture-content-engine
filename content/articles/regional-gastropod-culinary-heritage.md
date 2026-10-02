@@ -1,6 +1,6 @@
 ---
 title: "From Peppered Snails to Babbouche Broth: Regional Heritage and Gastropod Cookery"
-meta_description: "Explore West African peppered snails and Moroccan babbouche broth: street food culture, alligator pepper vs wild thyme spice pairings and traditional reduction techniques."
+meta_description: "West African peppered snails and Moroccan babbouche broth: street food culture, alligator pepper vs wild thyme and traditional reduction techniques."
 slug: "regional-gastropod-culinary-heritage"
 category_pillar: "Global Gastronomy & Recipes"
 target_region: "West Africa; Europe & Mediterranean"
@@ -211,7 +211,7 @@ Spain has several snail traditions. In Catalonia, especially Lleida, snails are 
   "@type": "Article",
   "@id": "https://www.example.com/articles/regional-gastropod-culinary-heritage/#article",
   "headline": "From Peppered Snails to Babbouche Broth: Regional Heritage and Gastropod Cookery",
-  "description": "Explore West African peppered snails and Moroccan babbouche broth: street food culture, alligator pepper vs wild thyme spice pairings and traditional reduction techniques.",
+  "description": "West African peppered snails and Moroccan babbouche broth: street food culture, alligator pepper vs wild thyme and traditional reduction techniques.",
   "image": [
     "https://www.example.com/images/articles/regional-gastropod-culinary-heritage.jpg"
   ],

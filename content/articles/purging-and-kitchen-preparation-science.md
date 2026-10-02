@@ -1,6 +1,6 @@
 ---
 title: "The Science of Purging and Enzymatic Cleaning: Preparing Farmed Gastropods for High-End Gastronomy"
-meta_description: "A professional kitchen guide to snail purging timelines, humane dispatch, mucin removal, enzymatic tenderising, texture control and secondary yields such as snail caviar."
+meta_description: "Professional guide to snail purging timelines, humane dispatch, mucin removal, enzymatic tenderising, texture control and snail caviar."
 slug: "purging-and-kitchen-preparation-science"
 category_pillar: "Snail Science & Kitchen Prep"
 target_region: "Global (UK & Europe primary; West Africa)"
@@ -239,7 +239,7 @@ Yes. Molluscs are one of the 14 major allergens that must be declared under UK a
   "@type": "Article",
   "@id": "https://www.example.com/articles/purging-and-kitchen-preparation-science/#article",
   "headline": "The Science of Purging and Enzymatic Cleaning: Preparing Farmed Gastropods for High-End Gastronomy",
-  "description": "A professional kitchen guide to snail purging timelines, humane dispatch, mucin removal, enzymatic tenderising, texture control and secondary yields such as snail caviar.",
+  "description": "Professional guide to snail purging timelines, humane dispatch, mucin removal, enzymatic tenderising, texture control and snail caviar.",
   "image": [
     "https://www.example.com/images/articles/purging-and-kitchen-preparation-science.jpg"
   ],
