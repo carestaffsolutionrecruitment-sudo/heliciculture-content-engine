@@ -25,6 +25,8 @@ ROOT = Path(__file__).resolve().parent.parent
 ARTICLES_DIR = ROOT / "content" / "articles"
 OUTPUT = ROOT / "bd_article_import.csv"
 
+SITE_URL = "https://snailworld.org"
+POST_URL_PREFIX = "/blog/"  # Brilliant Directories blog post path
 AUTHOR = "Batuli Kassim"
 PUBLISH_DATE = "2026-10-02"
 POST_STATUS = "Draft"
@@ -218,6 +220,12 @@ def build_rows():
             errors.append(f"{slug}: meta description exceeds {META_DESCRIPTION_MAX} chars")
         if not schema:
             errors.append(f"{slug}: no JSON-LD schema found")
+        post_url = f"{SITE_URL}{POST_URL_PREFIX}{slug}/"
+        if f'"{post_url}"' not in schema:
+            errors.append(f"{slug}: JSON-LD does not reference the post URL {post_url}")
+        for url in set(re.findall(rf"{re.escape(SITE_URL)}/[^\"#]*", schema)):
+            if url.endswith(f"/{slug}/") and url != post_url:
+                errors.append(f"{slug}: JSON-LD uses {url}, expected {post_url}")
         top, child, leaf = mapping["category"]
         rows.append([
             meta["title"],

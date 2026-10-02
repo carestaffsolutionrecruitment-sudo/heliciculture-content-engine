@@ -209,7 +209,7 @@ Spain has several snail traditions. In Catalonia, especially Lleida, snails are 
 {
   "@context": "https://schema.org",
   "@type": "Article",
-  "@id": "https://snailworld.org/articles/regional-gastropod-culinary-heritage/#article",
+  "@id": "https://snailworld.org/blog/regional-gastropod-culinary-heritage/#article",
   "headline": "From Peppered Snails to Babbouche Broth: Regional Heritage and Gastropod Cookery",
   "description": "West African peppered snails and Moroccan babbouche broth: street food culture, alligator pepper vs wild thyme and traditional reduction techniques.",
   "image": [
@@ -220,7 +220,7 @@ Spain has several snail traditions. In Catalonia, especially Lleida, snails are 
   "inLanguage": "en-GB",
   "mainEntityOfPage": {
     "@type": "WebPage",
-    "@id": "https://snailworld.org/articles/regional-gastropod-culinary-heritage/"
+    "@id": "https://snailworld.org/blog/regional-gastropod-culinary-heritage/"
   },
   "articleSection": "Global Gastronomy & Recipes",
   "keywords": "peppered snail, babbouche, alligator pepper, wild thyme, West African snail recipes, Moroccan snail soup, caragols a la llauna, Mediterranean snail dishes",
@@ -272,7 +272,7 @@ Spain has several snail traditions. In Catalonia, especially Lleida, snails are 
 {
   "@context": "https://schema.org",
   "@type": "FAQPage",
-  "@id": "https://snailworld.org/articles/regional-gastropod-culinary-heritage/#faq",
+  "@id": "https://snailworld.org/blog/regional-gastropod-culinary-heritage/#faq",
   "mainEntity": [
     {
       "@type": "Question",

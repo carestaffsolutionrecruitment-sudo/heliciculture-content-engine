@@ -232,7 +232,7 @@
 {
   ""@context"": ""https://schema.org"",
   ""@type"": ""Article"",
-  ""@id"": ""https://snailworld.org/articles/intensive-heliculture-pen-design/#article"",
+  ""@id"": ""https://snailworld.org/blog/intensive-heliculture-pen-design/#article"",
   ""headline"": ""Intensive Heliculture: Pen Design, Temperature Thresholds, and Biosecurity Standards"",
   ""description"": ""Technical guide for UK and European snail farmers: Cornu aspersum vs Achatina climate control, escape-proof pens, feed formulae and biosecurity."",
   ""image"": [
@@ -243,7 +243,7 @@
   ""inLanguage"": ""en-GB"",
   ""mainEntityOfPage"": {
     ""@type"": ""WebPage"",
-    ""@id"": ""https://snailworld.org/articles/intensive-heliculture-pen-design/""
+    ""@id"": ""https://snailworld.org/blog/intensive-heliculture-pen-design/""
   },
   ""articleSection"": ""Farm Operations & Business"",
   ""keywords"": ""heliculture, snail farming, Cornu aspersum, Achatina, snail pen design, snail farm biosecurity, snail feed formula, UK snail farming"",
@@ -295,7 +295,7 @@
 {
   ""@context"": ""https://schema.org"",
   ""@type"": ""FAQPage"",
-  ""@id"": ""https://snailworld.org/articles/intensive-heliculture-pen-design/#faq"",
+  ""@id"": ""https://snailworld.org/blog/intensive-heliculture-pen-design/#faq"",
   ""mainEntity"": [
     {
       ""@type"": ""Question"",
@@ -533,7 +533,7 @@
 {
   ""@context"": ""https://schema.org"",
   ""@type"": ""Article"",
-  ""@id"": ""https://snailworld.org/articles/purging-and-kitchen-preparation-science/#article"",
+  ""@id"": ""https://snailworld.org/blog/purging-and-kitchen-preparation-science/#article"",
   ""headline"": ""The Science of Purging and Enzymatic Cleaning: Preparing Farmed Gastropods for High-End Gastronomy"",
   ""description"": ""Professional guide to snail purging timelines, humane dispatch, mucin removal, enzymatic tenderising, texture control and snail caviar."",
   ""image"": [
@@ -544,7 +544,7 @@
   ""inLanguage"": ""en-GB"",
   ""mainEntityOfPage"": {
     ""@type"": ""WebPage"",
-    ""@id"": ""https://snailworld.org/articles/purging-and-kitchen-preparation-science/""
+    ""@id"": ""https://snailworld.org/blog/purging-and-kitchen-preparation-science/""
   },
   ""articleSection"": ""Snail Science & Kitchen Prep"",
   ""keywords"": ""purging snails, humane dispatch, escargot preparation, snail mucin, snail caviar, snail texture, enzymatic tenderising"",
@@ -596,7 +596,7 @@
 {
   ""@context"": ""https://schema.org"",
   ""@type"": ""FAQPage"",
-  ""@id"": ""https://snailworld.org/articles/purging-and-kitchen-preparation-science/#faq"",
+  ""@id"": ""https://snailworld.org/blog/purging-and-kitchen-preparation-science/#faq"",
   ""mainEntity"": [
     {
       ""@type"": ""Question"",
@@ -813,7 +813,7 @@
 {
   ""@context"": ""https://schema.org"",
   ""@type"": ""Article"",
-  ""@id"": ""https://snailworld.org/articles/regional-gastropod-culinary-heritage/#article"",
+  ""@id"": ""https://snailworld.org/blog/regional-gastropod-culinary-heritage/#article"",
   ""headline"": ""From Peppered Snails to Babbouche Broth: Regional Heritage and Gastropod Cookery"",
   ""description"": ""West African peppered snails and Moroccan babbouche broth: street food culture, alligator pepper vs wild thyme and traditional reduction techniques."",
   ""image"": [
@@ -824,7 +824,7 @@
   ""inLanguage"": ""en-GB"",
   ""mainEntityOfPage"": {
     ""@type"": ""WebPage"",
-    ""@id"": ""https://snailworld.org/articles/regional-gastropod-culinary-heritage/""
+    ""@id"": ""https://snailworld.org/blog/regional-gastropod-culinary-heritage/""
   },
   ""articleSection"": ""Global Gastronomy & Recipes"",
   ""keywords"": ""peppered snail, babbouche, alligator pepper, wild thyme, West African snail recipes, Moroccan snail soup, caragols a la llauna, Mediterranean snail dishes"",
@@ -876,7 +876,7 @@
 {
   ""@context"": ""https://schema.org"",
   ""@type"": ""FAQPage"",
-  ""@id"": ""https://snailworld.org/articles/regional-gastropod-culinary-heritage/#faq"",
+  ""@id"": ""https://snailworld.org/blog/regional-gastropod-culinary-heritage/#faq"",
   ""mainEntity"": [
     {
       ""@type"": ""Question"",

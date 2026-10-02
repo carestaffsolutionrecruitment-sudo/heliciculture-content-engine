@@ -275,7 +275,7 @@ Under controlled conditions, *Cornu aspersum* typically reaches market weight in
 {
   "@context": "https://schema.org",
   "@type": "Article",
-  "@id": "https://snailworld.org/articles/intensive-heliculture-pen-design/#article",
+  "@id": "https://snailworld.org/blog/intensive-heliculture-pen-design/#article",
   "headline": "Intensive Heliculture: Pen Design, Temperature Thresholds, and Biosecurity Standards",
   "description": "Technical guide for UK and European snail farmers: Cornu aspersum vs Achatina climate control, escape-proof pens, feed formulae and biosecurity.",
   "image": [
@@ -286,7 +286,7 @@ Under controlled conditions, *Cornu aspersum* typically reaches market weight in
   "inLanguage": "en-GB",
   "mainEntityOfPage": {
     "@type": "WebPage",
-    "@id": "https://snailworld.org/articles/intensive-heliculture-pen-design/"
+    "@id": "https://snailworld.org/blog/intensive-heliculture-pen-design/"
   },
   "articleSection": "Farm Operations & Business",
   "keywords": "heliculture, snail farming, Cornu aspersum, Achatina, snail pen design, snail farm biosecurity, snail feed formula, UK snail farming",
@@ -338,7 +338,7 @@ Under controlled conditions, *Cornu aspersum* typically reaches market weight in
 {
   "@context": "https://schema.org",
   "@type": "FAQPage",
-  "@id": "https://snailworld.org/articles/intensive-heliculture-pen-design/#faq",
+  "@id": "https://snailworld.org/blog/intensive-heliculture-pen-design/#faq",
   "mainEntity": [
     {
       "@type": "Question",
