@@ -1,11 +1,17 @@
 #!/usr/bin/env python3
-"""Generate the Brilliant Directories article import CSV.
+"""Generate the Brilliant Directories article import files.
 
 Reads the Markdown articles in content/articles/, maps each one to its
-category in the taxonomy defined in generate_bd_categories.py, and writes
-bd_article_import.csv to the repository root. Post bodies are converted to
-HTML (BD's post editor stores HTML); the JSON-LD schema blocks are moved into
-their own column so they can be placed in the page head or a custom field.
+category in the taxonomy defined in generate_bd_categories.py, and writes two
+files to the repository root:
+
+- bd_article_import.csv: the strict upload for My Content > Manage Posts >
+  Import Post File. Headers are BD's default post variables, every record sits
+  on one physical line, the file is pure ASCII (non-ASCII characters in the
+  HTML body become numeric entities) and it contains no <script> tags.
+- bd_article_reference.csv: everything BD does not import from that file
+  (intended URL, SEO title and description, category path, JSON-LD), to be
+  entered on each post after import. Not for upload.
 
 Uses only the Python standard library.
 
@@ -15,6 +21,7 @@ Usage:
 
 import csv
 import html
+import json
 import re
 import sys
 from pathlib import Path
@@ -24,33 +31,30 @@ from generate_bd_categories import TAXONOMY, slugify
 ROOT = Path(__file__).resolve().parent.parent
 ARTICLES_DIR = ROOT / "content" / "articles"
 OUTPUT = ROOT / "bd_article_import.csv"
+REFERENCE_OUTPUT = ROOT / "bd_article_reference.csv"
 
 SITE_URL = "https://snailworld.org"
 POST_URL_PREFIX = "/blog/"  # Brilliant Directories blog post path
 AUTHOR = "Batuli Kassim"
-PUBLISH_DATE = "2026-10-02"
-POST_STATUS = "Draft"
+# BD member ID that owns the posts (Members > search the author > ID). Leave
+# empty to omit the user_id column.
+BD_USER_ID = ""
 META_TITLE_MAX = 60
 META_DESCRIPTION_MAX = 160
 CATEGORY_SEPARATOR = " > "
 
-COLUMNS = [
-    "Post Title",
-    "Post URL Slug",
+# BD default post variables (see BD's "Default Post Variable Cheatsheet").
+IMPORT_COLUMNS = ["post_title", "post_content", "post_category", "post_tags"]
+
+REFERENCE_COLUMNS = [
+    "post_title",
+    "Post URL",
     "Category Tree",
-    "Parent Category",
-    "Child Category",
-    "Sub-Child Category",
-    "Category URL Slug",
     "Secondary Categories",
-    "Post Tags",
     "Author",
     "Meta Title",
     "Meta Description",
     "Target Region",
-    "Publish Date",
-    "Post Status",
-    "Post Content",
     "Schema JSON-LD",
     "Source File Path",
 ]
@@ -180,10 +184,35 @@ def parse_article(path):
     text = path.read_text(encoding="utf-8")
     _, frontmatter, body = text.split("---\n", 2)
     meta = dict(re.findall(r'^(\w+): "(.*)"$', frontmatter, re.M))
-    schema = "\n".join(re.findall(r'<script type="application/ld\+json">.*?</script>', body, re.S))
+    schema = " ".join(
+        '<script type="application/ld+json">' + json.dumps(json.loads(block), ensure_ascii=False) + "</script>"
+        for block in re.findall(r'<script type="application/ld\+json">(.*?)</script>', body, re.S)
+    )
     body = re.split(r"\n<!-- Structured data", body)[0]
     body = re.sub(r"^\s*# .*\n", "", body, count=1)  # BD renders the post title as the H1
     return meta, markdown_to_html(body.strip()), schema
+
+
+def to_single_line_ascii(body_html):
+    """Flatten HTML to one line and encode non-ASCII characters as entities.
+
+    Block-level tags make the newlines between them insignificant, and the
+    bodies contain no <pre> blocks, so joining lines does not change rendering.
+    """
+    one_line = "".join(line.strip() for line in body_html.splitlines())
+    one_line = one_line.replace('"', "&quot;")
+    return one_line.encode("ascii", "xmlcharrefreplace").decode("ascii")
+
+
+def import_columns():
+    return IMPORT_COLUMNS + (["user_id"] if BD_USER_ID else [])
+
+
+def write_csv(path, columns, rows):
+    with path.open("w", newline="", encoding="utf-8") as f:
+        writer = csv.writer(f, quoting=csv.QUOTE_ALL, lineterminator="\r\n")
+        writer.writerow(columns)
+        writer.writerows(rows)
 
 
 def category_index():
@@ -199,7 +228,7 @@ def category_index():
 
 def build_rows():
     categories = category_index()
-    errors, rows = [], []
+    errors, rows, reference_rows = [], [], []
     paths = sorted(ARTICLES_DIR.glob("*.md"))
     found = {p.stem for p in paths}
     for slug in ARTICLES.keys() - found:
@@ -226,40 +255,42 @@ def build_rows():
         for url in set(re.findall(rf"{re.escape(SITE_URL)}/[^\"#]*", schema)):
             if url.endswith(f"/{slug}/") and url != post_url:
                 errors.append(f"{slug}: JSON-LD uses {url}, expected {post_url}")
-        top, child, leaf = mapping["category"]
-        rows.append([
+        import_row = [
             meta["title"],
-            slug,
-            CATEGORY_SEPARATOR.join(mapping["category"]),
-            top,
-            child,
-            leaf,
-            categories.get(mapping["category"], ""),
-            " | ".join(CATEGORY_SEPARATOR.join(t) for t in mapping["secondary"]),
+            to_single_line_ascii(body_html),
+            mapping["category"][-1],
             ", ".join(mapping["tags"]),
+        ]
+        if BD_USER_ID:
+            import_row.append(BD_USER_ID)
+        for column, value in zip(import_columns(), import_row):
+            if not value.isascii() or re.search(r"[\r\n]", value) or "<script" in value.lower():
+                errors.append(f"{slug}: {column} must be single-line ASCII without <script>")
+        rows.append(import_row)
+        reference_rows.append([
+            meta["title"],
+            post_url,
+            CATEGORY_SEPARATOR.join(mapping["category"]),
+            " | ".join(CATEGORY_SEPARATOR.join(t) for t in mapping["secondary"]),
             AUTHOR,
             mapping["meta_title"],
             meta["meta_description"],
             meta["target_region"],
-            PUBLISH_DATE,
-            POST_STATUS,
-            body_html,
             schema,
             path.relative_to(ROOT).as_posix(),
         ])
-    return rows, errors
+    return rows, reference_rows, errors
 
 
 def main():
-    rows, errors = build_rows()
+    rows, reference_rows, errors = build_rows()
     if errors:
         print("Article import validation failed:", *errors, sep="\n  ", file=sys.stderr)
         return 1
-    with OUTPUT.open("w", newline="", encoding="utf-8") as f:
-        writer = csv.writer(f, quoting=csv.QUOTE_ALL)
-        writer.writerow(COLUMNS)
-        writer.writerows(rows)
+    write_csv(OUTPUT, import_columns(), rows)
+    write_csv(REFERENCE_OUTPUT, REFERENCE_COLUMNS, reference_rows)
     print(f"Wrote {len(rows)} articles to {OUTPUT}")
+    print(f"Wrote post metadata and schema to {REFERENCE_OUTPUT}")
     return 0
 
 
