@@ -36,15 +36,16 @@ REFERENCE_OUTPUT = ROOT / "bd_article_reference.csv"
 SITE_URL = "https://snailworld.org"
 POST_URL_PREFIX = "/blog/"  # Brilliant Directories blog post path
 AUTHOR = "Batuli Kassim"
-# BD member ID that owns the posts (Members > search the author > ID). Leave
-# empty to omit the user_id column.
+# BD member ID that owns the posts (Members > search the author > ID).
+# The user_id column is always written; it is left blank until this is set.
 BD_USER_ID = ""
 META_TITLE_MAX = 60
 META_DESCRIPTION_MAX = 160
 CATEGORY_SEPARATOR = " > "
 
-# BD default post variables (see BD's "Default Post Variable Cheatsheet").
-IMPORT_COLUMNS = ["post_title", "post_content", "post_category", "post_tags"]
+# Exact header row Brilliant Directories requires for blog imports (add
+# post_image only when importing images).
+IMPORT_COLUMNS = ["post_title", "post_content", "post_category", "post_tags", "user_id"]
 
 REFERENCE_COLUMNS = [
     "post_title",
@@ -204,14 +205,13 @@ def to_single_line_ascii(body_html):
     return one_line.encode("ascii", "xmlcharrefreplace").decode("ascii")
 
 
-def import_columns():
-    return IMPORT_COLUMNS + (["user_id"] if BD_USER_ID else [])
-
-
-def write_csv(path, columns, rows):
+def write_csv(path, columns, rows, quote_header=True):
     with path.open("w", newline="", encoding="utf-8") as f:
         writer = csv.writer(f, quoting=csv.QUOTE_ALL, lineterminator="\r\n")
-        writer.writerow(columns)
+        if quote_header:
+            writer.writerow(columns)
+        else:
+            f.write(",".join(columns) + "\r\n")
         writer.writerows(rows)
 
 
@@ -260,10 +260,9 @@ def build_rows():
             to_single_line_ascii(body_html),
             mapping["category"][-1],
             ", ".join(mapping["tags"]),
+            BD_USER_ID,
         ]
-        if BD_USER_ID:
-            import_row.append(BD_USER_ID)
-        for column, value in zip(import_columns(), import_row):
+        for column, value in zip(IMPORT_COLUMNS, import_row):
             if not value.isascii() or re.search(r"[\r\n]", value) or "<script" in value.lower():
                 errors.append(f"{slug}: {column} must be single-line ASCII without <script>")
         rows.append(import_row)
@@ -287,10 +286,13 @@ def main():
     if errors:
         print("Article import validation failed:", *errors, sep="\n  ", file=sys.stderr)
         return 1
-    write_csv(OUTPUT, import_columns(), rows)
+    # The header goes out unquoted so it matches BD's required row byte for byte.
+    write_csv(OUTPUT, IMPORT_COLUMNS, rows, quote_header=False)
     write_csv(REFERENCE_OUTPUT, REFERENCE_COLUMNS, reference_rows)
     print(f"Wrote {len(rows)} articles to {OUTPUT}")
     print(f"Wrote post metadata and schema to {REFERENCE_OUTPUT}")
+    if not BD_USER_ID:
+        print("Warning: BD_USER_ID is not set, so user_id is blank in every row.", file=sys.stderr)
     return 0
 
 
