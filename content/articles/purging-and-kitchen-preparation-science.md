@@ -237,18 +237,18 @@ Yes. Molluscs are one of the 14 major allergens that must be declared under UK a
 {
   "@context": "https://schema.org",
   "@type": "Article",
-  "@id": "https://www.example.com/articles/purging-and-kitchen-preparation-science/#article",
+  "@id": "https://snailworld.org/articles/purging-and-kitchen-preparation-science/#article",
   "headline": "The Science of Purging and Enzymatic Cleaning: Preparing Farmed Gastropods for High-End Gastronomy",
   "description": "Professional guide to snail purging timelines, humane dispatch, mucin removal, enzymatic tenderising, texture control and snail caviar.",
   "image": [
-    "https://www.example.com/images/articles/purging-and-kitchen-preparation-science.jpg"
+    "https://snailworld.org/images/articles/purging-and-kitchen-preparation-science.jpg"
   ],
   "datePublished": "2026-10-02",
   "dateModified": "2026-10-02",
   "inLanguage": "en-GB",
   "mainEntityOfPage": {
     "@type": "WebPage",
-    "@id": "https://www.example.com/articles/purging-and-kitchen-preparation-science/"
+    "@id": "https://snailworld.org/articles/purging-and-kitchen-preparation-science/"
   },
   "articleSection": "Snail Science & Kitchen Prep",
   "keywords": "purging snails, humane dispatch, escargot preparation, snail mucin, snail caviar, snail texture, enzymatic tenderising",
@@ -276,22 +276,22 @@ Yes. Molluscs are one of the 14 major allergens that must be declared under UK a
   "wordCount": 2789,
   "author": {
     "@type": "Person",
-    "@id": "https://www.example.com/authors/editorial-lead/#person",
-    "name": "[Author Name]",
+    "@id": "https://snailworld.org/authors/batuli-kassim/#person",
+    "name": "Batuli Kassim",
     "jobTitle": "Lead Agricultural Editor & Culinary Ethnographer",
-    "url": "https://www.example.com/authors/editorial-lead/",
+    "url": "https://snailworld.org/authors/batuli-kassim/",
     "worksFor": {
-      "@id": "https://www.example.com/#organization"
+      "@id": "https://snailworld.org/#organization"
     }
   },
   "publisher": {
     "@type": "Organization",
-    "@id": "https://www.example.com/#organization",
-    "name": "[Platform Name]",
-    "url": "https://www.example.com/",
+    "@id": "https://snailworld.org/#organization",
+    "name": "Snail World",
+    "url": "https://snailworld.org/",
     "logo": {
       "@type": "ImageObject",
-      "url": "https://www.example.com/images/logo.png"
+      "url": "https://snailworld.org/images/logo.png"
     }
   }
 }
@@ -300,7 +300,7 @@ Yes. Molluscs are one of the 14 major allergens that must be declared under UK a
 {
   "@context": "https://schema.org",
   "@type": "FAQPage",
-  "@id": "https://www.example.com/articles/purging-and-kitchen-preparation-science/#faq",
+  "@id": "https://snailworld.org/articles/purging-and-kitchen-preparation-science/#faq",
   "mainEntity": [
     {
       "@type": "Question",

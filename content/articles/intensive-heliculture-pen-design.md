@@ -275,18 +275,18 @@ Under controlled conditions, *Cornu aspersum* typically reaches market weight in
 {
   "@context": "https://schema.org",
   "@type": "Article",
-  "@id": "https://www.example.com/articles/intensive-heliculture-pen-design/#article",
+  "@id": "https://snailworld.org/articles/intensive-heliculture-pen-design/#article",
   "headline": "Intensive Heliculture: Pen Design, Temperature Thresholds, and Biosecurity Standards",
   "description": "Technical guide for UK and European snail farmers: Cornu aspersum vs Achatina climate control, escape-proof pens, feed formulae and biosecurity.",
   "image": [
-    "https://www.example.com/images/articles/intensive-heliculture-pen-design.jpg"
+    "https://snailworld.org/images/articles/intensive-heliculture-pen-design.jpg"
   ],
   "datePublished": "2026-10-02",
   "dateModified": "2026-10-02",
   "inLanguage": "en-GB",
   "mainEntityOfPage": {
     "@type": "WebPage",
-    "@id": "https://www.example.com/articles/intensive-heliculture-pen-design/"
+    "@id": "https://snailworld.org/articles/intensive-heliculture-pen-design/"
   },
   "articleSection": "Farm Operations & Business",
   "keywords": "heliculture, snail farming, Cornu aspersum, Achatina, snail pen design, snail farm biosecurity, snail feed formula, UK snail farming",
@@ -314,22 +314,22 @@ Under controlled conditions, *Cornu aspersum* typically reaches market weight in
   "wordCount": 3397,
   "author": {
     "@type": "Person",
-    "@id": "https://www.example.com/authors/editorial-lead/#person",
-    "name": "[Author Name]",
+    "@id": "https://snailworld.org/authors/batuli-kassim/#person",
+    "name": "Batuli Kassim",
     "jobTitle": "Lead Agricultural Editor",
-    "url": "https://www.example.com/authors/editorial-lead/",
+    "url": "https://snailworld.org/authors/batuli-kassim/",
     "worksFor": {
-      "@id": "https://www.example.com/#organization"
+      "@id": "https://snailworld.org/#organization"
     }
   },
   "publisher": {
     "@type": "Organization",
-    "@id": "https://www.example.com/#organization",
-    "name": "[Platform Name]",
-    "url": "https://www.example.com/",
+    "@id": "https://snailworld.org/#organization",
+    "name": "Snail World",
+    "url": "https://snailworld.org/",
     "logo": {
       "@type": "ImageObject",
-      "url": "https://www.example.com/images/logo.png"
+      "url": "https://snailworld.org/images/logo.png"
     }
   }
 }
@@ -338,7 +338,7 @@ Under controlled conditions, *Cornu aspersum* typically reaches market weight in
 {
   "@context": "https://schema.org",
   "@type": "FAQPage",
-  "@id": "https://www.example.com/articles/intensive-heliculture-pen-design/#faq",
+  "@id": "https://snailworld.org/articles/intensive-heliculture-pen-design/#faq",
   "mainEntity": [
     {
       "@type": "Question",

@@ -25,7 +25,7 @@ ROOT = Path(__file__).resolve().parent.parent
 ARTICLES_DIR = ROOT / "content" / "articles"
 OUTPUT = ROOT / "bd_article_import.csv"
 
-AUTHOR = "[Author Name]"
+AUTHOR = "Batuli Kassim"
 PUBLISH_DATE = "2026-10-02"
 POST_STATUS = "Draft"
 META_TITLE_MAX = 60
