@@ -237,7 +237,7 @@ Yes. Molluscs are one of the 14 major allergens that must be declared under UK a
 {
   "@context": "https://schema.org",
   "@type": "Article",
-  "@id": "https://snailworld.org/blog/purging-and-kitchen-preparation-science/#article",
+  "@id": "https://snailworld.org/blog/the-science-of-purging-and-enzymatic-cleaning-preparing-farmed-gastropods-for-high-end-gastronomy#article",
   "headline": "The Science of Purging and Enzymatic Cleaning: Preparing Farmed Gastropods for High-End Gastronomy",
   "description": "Professional guide to snail purging timelines, humane dispatch, mucin removal, enzymatic tenderising, texture control and snail caviar.",
   "image": [
@@ -248,7 +248,7 @@ Yes. Molluscs are one of the 14 major allergens that must be declared under UK a
   "inLanguage": "en-GB",
   "mainEntityOfPage": {
     "@type": "WebPage",
-    "@id": "https://snailworld.org/blog/purging-and-kitchen-preparation-science/"
+    "@id": "https://snailworld.org/blog/the-science-of-purging-and-enzymatic-cleaning-preparing-farmed-gastropods-for-high-end-gastronomy"
   },
   "articleSection": "Snail Science & Kitchen Prep",
   "keywords": "purging snails, humane dispatch, escargot preparation, snail mucin, snail caviar, snail texture, enzymatic tenderising",
@@ -300,7 +300,7 @@ Yes. Molluscs are one of the 14 major allergens that must be declared under UK a
 {
   "@context": "https://schema.org",
   "@type": "FAQPage",
-  "@id": "https://snailworld.org/blog/purging-and-kitchen-preparation-science/#faq",
+  "@id": "https://snailworld.org/blog/the-science-of-purging-and-enzymatic-cleaning-preparing-farmed-gastropods-for-high-end-gastronomy#faq",
   "mainEntity": [
     {
       "@type": "Question",

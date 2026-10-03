@@ -34,11 +34,14 @@ OUTPUT = ROOT / "bd_article_import.csv"
 REFERENCE_OUTPUT = ROOT / "bd_article_reference.csv"
 
 SITE_URL = "https://snailworld.org"
-POST_URL_PREFIX = "/blog/"  # Brilliant Directories blog post path
+# BD serves blog posts at /blog/<slugified title>, with no trailing slash and
+# no way to set a custom slug, so post URLs are derived from the title.
+POST_URL_PREFIX = "/blog/"
 AUTHOR = "Batuli Kassim"
-# BD member ID that owns the posts (Members > search the author > ID).
-# The user_id column is always written; it is left blank until this is set.
-BD_USER_ID = ""
+# BD member that owns the posts: "Admin User - Blog Author" (member #5).
+BD_USER_ID = "5"
+# BD's post tags field accepts at most 100 characters.
+POST_TAGS_MAX = 100
 META_TITLE_MAX = 60
 META_DESCRIPTION_MAX = 160
 CATEGORY_SEPARATOR = " > "
@@ -205,6 +208,20 @@ def to_single_line_ascii(body_html):
     return one_line.encode("ascii", "xmlcharrefreplace").decode("ascii")
 
 
+def post_url(title):
+    return f"{SITE_URL}{POST_URL_PREFIX}{slugify(title)}"
+
+
+def join_tags(tags, limit=POST_TAGS_MAX):
+    """Join tags in priority order, dropping whole tags that would exceed the limit."""
+    kept = []
+    for tag in tags:
+        if len(", ".join(kept + [tag])) > limit:
+            break
+        kept.append(tag)
+    return ", ".join(kept)
+
+
 def write_csv(path, columns, rows, quote_header=True):
     with path.open("w", newline="", encoding="utf-8") as f:
         writer = csv.writer(f, quoting=csv.QUOTE_ALL, lineterminator="\r\n")
@@ -249,17 +266,17 @@ def build_rows():
             errors.append(f"{slug}: meta description exceeds {META_DESCRIPTION_MAX} chars")
         if not schema:
             errors.append(f"{slug}: no JSON-LD schema found")
-        post_url = f"{SITE_URL}{POST_URL_PREFIX}{slug}/"
-        if f'"{post_url}"' not in schema:
-            errors.append(f"{slug}: JSON-LD does not reference the post URL {post_url}")
-        for url in set(re.findall(rf"{re.escape(SITE_URL)}/[^\"#]*", schema)):
-            if url.endswith(f"/{slug}/") and url != post_url:
-                errors.append(f"{slug}: JSON-LD uses {url}, expected {post_url}")
+        url = post_url(meta["title"])
+        if f'"{url}"' not in schema:
+            errors.append(f"{slug}: JSON-LD does not reference the post URL {url}")
+        for found_url in set(re.findall(rf"{re.escape(SITE_URL + POST_URL_PREFIX)}[^\"#]*", schema)):
+            if found_url != url:
+                errors.append(f"{slug}: JSON-LD uses {found_url}, expected {url}")
         import_row = [
             meta["title"],
             to_single_line_ascii(body_html),
             mapping["category"][-1],
-            ", ".join(mapping["tags"]),
+            join_tags(mapping["tags"]),
             BD_USER_ID,
         ]
         for column, value in zip(IMPORT_COLUMNS, import_row):
@@ -268,7 +285,7 @@ def build_rows():
         rows.append(import_row)
         reference_rows.append([
             meta["title"],
-            post_url,
+            url,
             CATEGORY_SEPARATOR.join(mapping["category"]),
             " | ".join(CATEGORY_SEPARATOR.join(t) for t in mapping["secondary"]),
             AUTHOR,
