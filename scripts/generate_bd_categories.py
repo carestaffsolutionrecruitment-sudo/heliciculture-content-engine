@@ -78,7 +78,7 @@ TAXONOMY = [
                 "cleaning chemistry, meat texture and secondary yields.",
                 [
                     (
-                        "Purging & Cleaning",
+                        "Purging and Cleaning",
                         "How to Purge & Clean Snails for Cooking",
                         "Purging timelines for farmed and wild snails, mucin removal "
                         "with salt, acid and alum, and professional cleaning methods.",

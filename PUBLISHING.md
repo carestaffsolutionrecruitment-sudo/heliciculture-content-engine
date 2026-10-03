@@ -15,6 +15,7 @@ Other things we learned on snailworld.org (these are observations, not documente
 | The form has no slug field | The URL is built from the title: `https://snailworld.org/blog/<slugified-title>`, with no trailing slash |
 | Tags are limited to 100 characters | The generator keeps whole tags in priority order up to the limit |
 | Publish status defaults to "No" | Set it to "Yes" to publish |
+| A `&` in a category name breaks its clean URL, redirects and filter links | Write "and" in category names that have posts or landing pages (e.g. "System Design and Pens", "Purging and Cleaning"); the slug becomes `purging-and-cleaning` and the filter URL `/blog?category[]=Purging+and+Cleaning` |
 | The editor rewrites numeric codes (`&#8212;`) as named ones (`&mdash;`) | They display the same |
 
 ## Steps for each new batch

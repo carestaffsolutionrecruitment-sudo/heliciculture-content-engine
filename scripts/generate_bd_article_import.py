@@ -89,7 +89,7 @@ ARTICLES = {
         "category": (
             "Commercial Producers & Aspiring Farmers",
             "Snail Science & Kitchen Prep",
-            "Purging & Cleaning",
+            "Purging and Cleaning",
         ),
         "secondary": [
             ("Commercial Producers & Aspiring Farmers", "Snail Science & Kitchen Prep", "Dispatching & Safety"),
