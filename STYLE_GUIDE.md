@@ -6,8 +6,8 @@ This style guide establishes the editorial voice, structural requirements, audie
 
 ## 1. Core Audience
 The platform serves a dual-audience model spanning agricultural producers and global food enthusiasts:
-- **Commercial Producers & Aspiring Farmers:** Entrepreneurs, smallholders, and agricultural investors looking for technical, regulatory, and economically viable data on intensive snail farming (heliculture), biosecurity, feeding formulations, and supply-chain logistics.
-- **Culinary Professionals & Food Enthusiasts:** Chefs, home cooks, and cultural explorers interested in high-end escargot prep, traditional heritage recipes, kitchen science, and the global diversity of gastropod consumption.
+- **Commercial Producers and Aspiring Farmers:** Entrepreneurs, smallholders, and agricultural investors looking for technical, regulatory, and economically viable data on intensive snail farming (heliculture), biosecurity, feeding formulations, and supply-chain logistics.
+- **Culinary Professionals and Food Enthusiasts:** Chefs, home cooks, and cultural explorers interested in high-end escargot prep, traditional heritage recipes, kitchen science, and the global diversity of gastropod consumption.
 
 ---
 
@@ -21,18 +21,18 @@ Content must balance **scientific precision** with **accessible culinary passion
 
 ## 3. Niche Requirements & Pillars
 All content and database organization must map cleanly to three core content pillars:
-1. **Farm Operations & Business:** System design (e.g., intensive pen layouts), feeding protocols, humidity/temperature management, regulatory compliance (game farming, biosecurity), and enterprise economics.
-2. **Snail Science & Kitchen Prep:** Purging timelines, humane dispatch methods, cleaning chemistry, meat texture control, and the processing of secondary yields (such as snail mucin and caviar).
-3. **Global Gastronomy & Recipes:** Regional preparation styles, historical context, flavor profiles, and pairing guides.
+1. **Farm Operations and Business:** System design (e.g., intensive pen layouts), feeding protocols, humidity/temperature management, regulatory compliance (game farming, biosecurity), and enterprise economics.
+2. **Snail Science and Kitchen Prep:** Purging timelines, humane dispatch methods, cleaning chemistry, meat texture control, and the processing of secondary yields (such as snail mucin and caviar).
+3. **Global Gastronomy and Recipes:** Regional preparation styles, historical context, flavor profiles, and pairing guides.
 
 ---
 
 ## 4. Target Regional Locations
 To capture global organic search intent and establish regional authority, content and categorization must explicitly accommodate and target the following primary regions:
 - **West Africa:** Focusing on Giant African Land Snails (*Achatina* species), peppered snail stews, spicy tomato-onion reductions, street food culture, traditional ceremonies, and local processing methods.
-- **Europe & Mediterranean:** Focusing on classic French escargot (*Helix pomatia*, *Cornu aspersum*), Spanish *Caragols a la Llauna*, Italian regional stews, Moroccan *Babbouche* spiced broth, and strict European foraging/farming protection laws.
-- **Asia & Southeast Asia:** Focusing on Vietnamese river snail soups (*Bún Ốc*), coconut milk preparations (*Ốc Len Xào Dừa*), Chinese regional street food (Luosifen, Sichuan stir-fries), and East Asian night market culture.
-- **The Americas & USA:** Focusing on the growing high-end culinary market, regulatory compliance (FDA/USDA non-indigenous transport rules), fusion concepts, and historical regional preparations.
+- **Europe and Mediterranean:** Focusing on classic French escargot (*Helix pomatia*, *Cornu aspersum*), Spanish *Caragols a la Llauna*, Italian regional stews, Moroccan *Babbouche* spiced broth, and strict European foraging/farming protection laws.
+- **Asia and Southeast Asia:** Focusing on Vietnamese river snail soups (*Bún Ốc*), coconut milk preparations (*Ốc Len Xào Dừa*), Chinese regional street food (Luosifen, Sichuan stir-fries), and East Asian night market culture.
+- **The Americas and USA:** Focusing on the growing high-end culinary market, regulatory compliance (FDA/USDA non-indigenous transport rules), fusion concepts, and historical regional preparations.
 
 ---
 

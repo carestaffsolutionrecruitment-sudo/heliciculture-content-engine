@@ -2,7 +2,7 @@
 title: "Intensive Heliculture: Pen Design, Temperature Thresholds, and Biosecurity Standards"
 meta_description: "Technical guide for UK and European snail farmers: Cornu aspersum vs Achatina climate control, escape-proof pens, feed formulae and biosecurity."
 slug: "intensive-heliculture-pen-design"
-category_pillar: "Farm Operations & Business"
+category_pillar: "Farm Operations and Business"
 target_region: "UK & Europe"
 ---
 
@@ -288,7 +288,7 @@ Under controlled conditions, *Cornu aspersum* typically reaches market weight in
     "@type": "WebPage",
     "@id": "https://snailworld.org/blog/intensive-heliculture-pen-design-temperature-thresholds-and-biosecurity-standards"
   },
-  "articleSection": "Farm Operations & Business",
+  "articleSection": "Farm Operations and Business",
   "keywords": "heliculture, snail farming, Cornu aspersum, Achatina, snail pen design, snail farm biosecurity, snail feed formula, UK snail farming",
   "about": [
     {

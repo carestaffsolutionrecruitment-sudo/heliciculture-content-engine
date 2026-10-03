@@ -71,13 +71,13 @@ REFERENCE_COLUMNS = [
 ARTICLES = {
     "intensive-heliculture-pen-design": {
         "category": (
-            "Commercial Producers & Aspiring Farmers",
-            "Farm Operations & Business",
+            "Commercial Producers and Aspiring Farmers",
+            "Farm Operations and Business",
             "System Design and Pens",
         ),
         "secondary": [
-            ("Commercial Producers & Aspiring Farmers", "Farm Operations & Business", "Feeding & Nutrition"),
-            ("Commercial Producers & Aspiring Farmers", "Farm Operations & Business", "Biosecurity & Regulations"),
+            ("Commercial Producers and Aspiring Farmers", "Farm Operations and Business", "Feeding and Nutrition"),
+            ("Commercial Producers and Aspiring Farmers", "Farm Operations and Business", "Biosecurity and Regulations"),
         ],
         "tags": [
             "heliculture", "snail farming", "Cornu aspersum", "Achatina", "pen design",
@@ -87,14 +87,14 @@ ARTICLES = {
     },
     "purging-and-kitchen-preparation-science": {
         "category": (
-            "Commercial Producers & Aspiring Farmers",
-            "Snail Science & Kitchen Prep",
+            "Commercial Producers and Aspiring Farmers",
+            "Snail Science and Kitchen Prep",
             "Purging and Cleaning",
         ),
         "secondary": [
-            ("Commercial Producers & Aspiring Farmers", "Snail Science & Kitchen Prep", "Dispatching & Safety"),
-            ("Commercial Producers & Aspiring Farmers", "Snail Science & Kitchen Prep", "Meat Science & Texture"),
-            ("Commercial Producers & Aspiring Farmers", "Snail Science & Kitchen Prep", "Mucin & Byproducts"),
+            ("Commercial Producers and Aspiring Farmers", "Snail Science and Kitchen Prep", "Dispatching and Safety"),
+            ("Commercial Producers and Aspiring Farmers", "Snail Science and Kitchen Prep", "Meat Science and Texture"),
+            ("Commercial Producers and Aspiring Farmers", "Snail Science and Kitchen Prep", "Mucin and Byproducts"),
         ],
         "tags": [
             "purging snails", "humane dispatch", "escargot preparation", "mucin removal",
@@ -104,15 +104,15 @@ ARTICLES = {
     },
     "regional-gastropod-culinary-heritage": {
         "category": (
-            "Culinary Professionals & Food Enthusiasts",
-            "Global Gastronomy & Recipes",
+            "Culinary Professionals and Food Enthusiasts",
+            "Global Gastronomy and Recipes",
             "West Africa",
         ),
         "secondary": [
-            ("Culinary Professionals & Food Enthusiasts", "Global Gastronomy & Recipes", "Europe & Mediterranean"),
+            ("Culinary Professionals and Food Enthusiasts", "Global Gastronomy and Recipes", "Europe and Mediterranean"),
         ],
         "tags": [
-            "West Africa", "Europe & Mediterranean", "Nigeria", "Ghana", "Morocco", "Spain",
+            "West Africa", "Europe and Mediterranean", "Nigeria", "Ghana", "Morocco", "Spain",
             "Sicily", "Crete", "peppered snail", "babbouche", "snail pepper soup",
             "caragols a la llauna", "alligator pepper", "wild thyme", "street food",
         ],

@@ -34,14 +34,14 @@ META_DESCRIPTION_MAX = 160
 # (name, meta_title, meta_description, children)
 TAXONOMY = [
     (
-        "Commercial Producers & Aspiring Farmers",
+        "Commercial Producers and Aspiring Farmers",
         "Snail Farming for Commercial Producers & New Farmers",
         "Technical, regulatory and business guidance for commercial snail "
         "farmers and aspiring heliculture entrepreneurs in the UK and beyond.",
         [
             (
-                "Farm Operations & Business",
-                "Snail Farm Operations & Business Guides",
+                "Farm Operations and Business",
+                "Snail Farm Operations and Business Guides",
                 "Run a profitable snail farm: pen design, feeding programmes, "
                 "biosecurity, regulatory compliance and enterprise economics.",
                 [
@@ -52,19 +52,19 @@ TAXONOMY = [
                         "escape prevention and housing for Cornu aspersum and Achatina.",
                     ),
                     (
-                        "Feeding & Nutrition",
+                        "Feeding and Nutrition",
                         "Snail Feeding Formulae & Nutrition Guides",
                         "Commercial snail feed formulae, protein and calcium targets, "
                         "fresh forage and feeding practice for faster, healthier growth.",
                     ),
                     (
-                        "Biosecurity & Regulations",
-                        "Snail Farm Biosecurity & Regulations",
+                        "Biosecurity and Regulations",
+                        "Snail Farm Biosecurity and Regulations",
                         "Biosecurity programmes, food hygiene law, non-native species "
                         "rules and compliance checklists for commercial snail farms.",
                     ),
                     (
-                        "Economics & Yields",
+                        "Economics and Yields",
                         "Snail Farming Economics, Costs & Yields",
                         "Realistic snail farm start-up costs, production cycles, yields, "
                         "market prices and routes to market for heliculture businesses.",
@@ -72,8 +72,8 @@ TAXONOMY = [
                 ],
             ),
             (
-                "Snail Science & Kitchen Prep",
-                "Snail Science & Kitchen Preparation Guides",
+                "Snail Science and Kitchen Prep",
+                "Snail Science and Kitchen Preparation Guides",
                 "The science of preparing snails: purging, humane dispatch, "
                 "cleaning chemistry, meat texture and secondary yields.",
                 [
@@ -84,19 +84,19 @@ TAXONOMY = [
                         "with salt, acid and alum, and professional cleaning methods.",
                     ),
                     (
-                        "Dispatching & Safety",
+                        "Dispatching and Safety",
                         "Humane Snail Dispatch & Food Safety",
                         "Humane dispatch methods, food hygiene, allergen controls and "
                         "safe handling of farmed snails, including Achatina species.",
                     ),
                     (
-                        "Meat Science & Texture",
-                        "Snail Meat Science & Texture Control",
+                        "Meat Science and Texture",
+                        "Snail Meat Science and Texture Control",
                         "Control snail meat texture with court-bouillon, sous vide and "
                         "enzymatic tenderising. Cooking times by species and size.",
                     ),
                     (
-                        "Mucin & Byproducts",
+                        "Mucin and Byproducts",
                         "Snail Mucin, Caviar & Byproduct Guides",
                         "Snail caviar production, cosmetic mucin collection, shell "
                         "processing and the regulations behind secondary yields.",
@@ -106,13 +106,13 @@ TAXONOMY = [
         ],
     ),
     (
-        "Culinary Professionals & Food Enthusiasts",
+        "Culinary Professionals and Food Enthusiasts",
         "Snail Cookery for Chefs & Food Enthusiasts",
         "Escargot technique, heritage recipes and global snail traditions "
         "for chefs, home cooks and culinary explorers.",
         [
             (
-                "Global Gastronomy & Recipes",
+                "Global Gastronomy and Recipes",
                 "Global Snail Recipes & Culinary Traditions",
                 "Regional snail recipes, history, flavour profiles and pairing "
                 "guides from West Africa, Europe, Asia and the Americas.",
@@ -124,20 +124,20 @@ TAXONOMY = [
                         "giant African land snail cookery, spices and street food.",
                     ),
                     (
-                        "Europe & Mediterranean",
+                        "Europe and Mediterranean",
                         "European & Mediterranean Snail Recipes",
                         "Escargots a la bourguignonne, caragols a la llauna, Moroccan "
                         "babbouche and Italian snail stews: Mediterranean classics.",
                     ),
                     (
-                        "Asia & Southeast Asia",
+                        "Asia and Southeast Asia",
                         "Asian & Southeast Asian Snail Recipes",
                         "Vietnamese bun oc, coconut snail stir-fries, luosifen and "
                         "Sichuan snail dishes from Asia's night markets and kitchens.",
                     ),
                     (
-                        "Americas & USA",
-                        "Snail Cuisine in the Americas & USA",
+                        "Americas and USA",
+                        "Snail Cuisine in the Americas and USA",
                         "Fine-dining escargot, fusion snail dishes, regional history "
                         "and US import rules for chefs across the Americas.",
                     ),
