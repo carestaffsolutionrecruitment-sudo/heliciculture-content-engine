@@ -5,13 +5,15 @@ Reads the Markdown articles in content/articles/, maps each one to its
 category in the taxonomy defined in generate_bd_categories.py, and writes two
 files to the repository root:
 
-- bd_article_import.csv: the strict upload for My Content > Manage Posts >
-  Import Post File. Headers are BD's default post variables, every record sits
-  on one physical line, the file is pure ASCII (non-ASCII characters in the
-  HTML body become numeric entities) and it contains no <script> tags.
-- bd_article_reference.csv: everything BD does not import from that file
-  (intended URL, SEO title and description, category path, JSON-LD), to be
-  entered on each post after import. Not for upload.
+- bd_article_import.csv: one row per post using BD's default post variables.
+  Every record sits on one physical line, the file is pure ASCII (non-ASCII
+  characters in the HTML body become numeric entities) and it contains no
+  <script> tags. Posts are published by entering each row in the Add Post
+  form (see PUBLISHING.md), because BD's Import Post File rejects any file
+  containing a <table> tag and our articles use tables.
+- bd_article_reference.csv: everything the post form does not take (live URL,
+  SEO title and description, category path, JSON-LD), to be entered on each
+  post after publishing.
 
 Uses only the Python standard library.
 
@@ -312,6 +314,13 @@ def main():
     print(f"Wrote post metadata and schema to {REFERENCE_OUTPUT}")
     if not BD_USER_ID:
         print("Warning: BD_USER_ID is not set, so user_id is blank in every row.", file=sys.stderr)
+    with_tables = [row[0] for row in rows if "<table" in row[1].lower()]
+    if with_tables:
+        print(
+            f"Note: {len(with_tables)} of {len(rows)} posts contain tables, which BD's Import Post File "
+            "rejects as 'Invalid file'. Publish them through the Add Post form (see PUBLISHING.md).",
+            file=sys.stderr,
+        )
     return 0
 
 
