@@ -34,13 +34,15 @@ OUTPUT = ROOT / "bd_article_import.csv"
 REFERENCE_OUTPUT = ROOT / "bd_article_reference.csv"
 
 SITE_URL = "https://snailworld.org"
-# BD serves blog posts at /blog/<slugified title>, with no trailing slash and
-# no way to set a custom slug, so post URLs are derived from the title.
+# Observed on snailworld.org (not documented by BD): blog posts are served at
+# /blog/<slugified title> with no trailing slash, and the post form has no
+# slug field, so post URLs are derived from the title.
 POST_URL_PREFIX = "/blog/"
 AUTHOR = "Batuli Kassim"
 # BD member that owns the posts: "Admin User - Blog Author" (member #5).
 BD_USER_ID = "5"
-# BD's post tags field accepts at most 100 characters.
+# Observed on snailworld.org (not documented by BD): the post form rejects
+# tags longer than 100 characters.
 POST_TAGS_MAX = 100
 META_TITLE_MAX = 60
 META_DESCRIPTION_MAX = 160
