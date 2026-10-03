@@ -46,7 +46,7 @@ TAXONOMY = [
                 "biosecurity, regulatory compliance and enterprise economics.",
                 [
                     (
-                        "System Design & Pens",
+                        "System Design and Pens",
                         "Snail Farm System Design & Pen Layouts",
                         "Intensive and outdoor snail pen design, climate control, "
                         "escape prevention and housing for Cornu aspersum and Achatina.",

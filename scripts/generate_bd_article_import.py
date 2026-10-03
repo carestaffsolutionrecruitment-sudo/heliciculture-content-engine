@@ -73,7 +73,7 @@ ARTICLES = {
         "category": (
             "Commercial Producers & Aspiring Farmers",
             "Farm Operations & Business",
-            "System Design & Pens",
+            "System Design and Pens",
         ),
         "secondary": [
             ("Commercial Producers & Aspiring Farmers", "Farm Operations & Business", "Feeding & Nutrition"),
