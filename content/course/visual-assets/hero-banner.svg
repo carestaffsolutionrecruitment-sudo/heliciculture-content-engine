@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 400" width="100%" preserveAspectRatio="xMidYMid slice" role="img" aria-labelledby="hero-title hero-desc">
+  <title id="hero-title">Commercial Heliculture Masterclass</title>
+  <desc id="hero-desc">Course banner: gold title on deep forest green, with a faint grid of farming rack tiers and a line-art snail.</desc>
+  <defs>
+    <!-- Fades the rack grid in from left to right so it never sits behind the title -->
+    <linearGradient id="grid-fade" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0.38" stop-color="#fff" stop-opacity="0"/>
+      <stop offset="0.75" stop-color="#fff" stop-opacity="1"/>
+    </linearGradient>
+    <mask id="grid-mask">
+      <rect width="1200" height="400" fill="url(#grid-fade)"/>
+    </mask>
+    <radialGradient id="glow" cx="0.82" cy="0.5" r="0.45">
+      <stop offset="0" stop-color="#2D6A4F" stop-opacity="0.9"/>
+      <stop offset="1" stop-color="#1B4332" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="400" fill="#1B4332"/>
+  <rect width="1200" height="400" fill="url(#glow)"/>
+
+  <!-- Geometric grid: structured farming tiers (shelves and rack posts) -->
+  <g mask="url(#grid-mask)" stroke="#D4AF37" stroke-opacity="0.16" stroke-width="1">
+      <line x1="520" y1="70" x2="1200" y2="70"/>
+      <line x1="520" y1="125" x2="1200" y2="125"/>
+      <line x1="520" y1="180" x2="1200" y2="180"/>
+      <line x1="520" y1="235" x2="1200" y2="235"/>
+      <line x1="520" y1="290" x2="1200" y2="290"/>
+      <line x1="520" y1="345" x2="1200" y2="345"/>
+      <line x1="560" y1="0" x2="560" y2="400"/>
+      <line x1="640" y1="0" x2="640" y2="400"/>
+      <line x1="720" y1="0" x2="720" y2="400"/>
+      <line x1="800" y1="0" x2="800" y2="400"/>
+      <line x1="880" y1="0" x2="880" y2="400"/>
+      <line x1="960" y1="0" x2="960" y2="400"/>
+      <line x1="1040" y1="0" x2="1040" y2="400"/>
+      <line x1="1120" y1="0" x2="1120" y2="400"/>
+      <line x1="1200" y1="0" x2="1200" y2="400"/>
+  </g>
+
+  <!-- Gold rule and text block (left, text-safe area) -->
+  <rect x="80" y="104" width="64" height="4" rx="2" fill="#D4AF37"/>
+  <text x="80" y="186" fill="#D4AF37" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="60" font-weight="700" letter-spacing="-0.5">Commercial Heliculture</text>
+  <text x="80" y="256" fill="#D4AF37" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="60" font-weight="700" letter-spacing="-0.5">Masterclass</text>
+  <text x="80" y="308" fill="#F1F5EE" fill-opacity="0.85" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="22" font-weight="400">From smallholder to professional snail farm · Snail World</text>
+
+  <!-- Minimalist line-art snail -->
+  <g fill="none" stroke="#D4AF37" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+    <!-- Shell spiral -->
+    <path d="M 977.0 214.0 L 976.8 213.1 L 976.7 212.2 L 976.7 211.2 L 976.8 210.2 L 977.0 209.2 L 977.4 208.1 L 978.0 207.1 L 978.6 206.1 L 979.5 205.2 L 980.5 204.3 L 981.6 203.5 L 982.9 202.9 L 984.3 202.4 L 985.8 202.0 L 987.4 201.8 L 989.1 201.7 L 990.8 201.9 L 992.5 202.2 L 994.2 202.8 L 995.8 203.6 L 997.4 204.5 L 998.9 205.7 L 1000.3 207.1 L 1001.5 208.6 L 1002.5 210.3 L 1003.3 212.2 L 1003.8 214.2 L 1004.2 216.2 L 1004.2 218.4 L 1004.0 220.5 L 1003.4 222.7 L 1002.6 224.9 L 1001.4 227.0 L 1000.0 229.0 L 998.3 230.8 L 996.3 232.5 L 994.1 234.0 L 991.6 235.3 L 989.0 236.3 L 986.1 237.0 L 983.2 237.4 L 980.1 237.5 L 977.0 237.3 L 973.9 236.7 L 970.9 235.7 L 967.9 234.4 L 965.1 232.8 L 962.5 230.8 L 960.1 228.6 L 957.9 226.0 L 956.1 223.2 L 954.7 220.1 L 953.6 216.9 L 952.9 213.5 L 952.7 210.0 L 952.9 206.4 L 953.6 202.9 L 954.8 199.4 L 956.4 196.0 L 958.5 192.7 L 961.0 189.7 L 964.0 186.9 L 967.3 184.4 L 971.0 182.2 L 974.9 180.5 L 979.2 179.2 L 983.6 178.3 L 988.2 177.9 L 992.8 178.0 L 997.5 178.6 L 1002.1 179.7 L 1006.6 181.4 L 1010.9 183.5 L 1015.0 186.2 L 1018.7 189.3 L 1022.1 192.8 L 1025.0 196.7 L 1027.4 200.9 L 1029.3 205.5 L 1030.6 210.2 L 1031.4 215.1 L 1031.4 220.2 L 1030.9 225.2 L 1029.6 230.3 L 1027.8 235.2 L 1025.2 239.9 L 1022.1 244.4 L 1018.4 248.5 L 1014.1 252.3 L 1009.3 255.6 L 1004.1 258.4 L 998.5 260.6 L 992.6 262.2 L 986.4 263.2 L 980.2 263.6 L 973.8 263.2 L 967.5 262.2 L 961.3 260.4 L 955.2 258.0 L 949.5 254.9 L 944.2 251.2 L 939.3 246.9 L 935.0 242.1 L 931.3 236.7 L 928.2 231.0 L 925.9 224.9 L 924.3 218.5 L 923.6 212.0 L 923.7 205.3 L 924.7 198.7 L 926.5 192.1 L 929.2 185.8 L 932.7 179.7 L 936.9 173.9 L 942.0 168.7 L 947.7 163.9 L 954.0 159.8 L 960.8 156.4 L 968.2 153.6 L 975.8 151.7 L 983.8 150.6 L 991.8 150.4 L 1000.0 151.1 L 1008.0 152.6 L 1015.9 155.0 L 1023.5 158.2 L 1030.6 162.3 L 1037.3 167.2 L 1043.3 172.8 L 1048.6 179.0 L 1053.2 185.9 L 1056.8 193.2 L 1059.5 200.9 L 1061.3 209.0 L 1062.0 217.2 L 1061.6 225.5 L 1060.2 233.8 L 1057.8 241.9 L 1054.2 249.8 L 1049.7 257.3"/>
+    <!-- Shell meets the foot -->
+    <path d="M 1050.0 257.3 Q 1060 276 1056 291"/>
+    <!-- Body / foot -->
+    <path d="M 905 290 Q 960 300 1040 292 Q 1080 288 1092 262 Q 1100 236 1088 214"/>
+    <path d="M 905 290 Q 893 290 890 282"/>
+    <!-- Head and tentacles -->
+    <path d="M 1088 214 L 1100 172"/>
+    <path d="M 1086 222 L 1122 186"/>
+  </g>
+  <circle cx="1100" cy="168" r="5" fill="#D4AF37"/>
+  <circle cx="1125" cy="183" r="5" fill="#D4AF37"/>
+</svg>

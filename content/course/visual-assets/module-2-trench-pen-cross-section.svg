@@ -1,0 +1,194 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 960" width="100%" role="img" aria-labelledby="trench-title trench-desc" font-family="Inter, 'Helvetica Neue', Arial, sans-serif">
+  <title id="trench-title">Trench pen: drainage and airflow cross-section</title>
+  <desc id="trench-desc">Section A shows a block-lined snail trench pen across its width: a raised curb, latched mesh lid with an overhang, an air space, 15 to 20 cm of loam substrate, a separator layer, a 5 to 10 cm gravel drainage layer with a perforated pipe, and a shade roof with cross-ventilation. Section B shows the trench along its length: the base falls 1 to 2 percent to a meshed outlet that drains to a gravel soakaway, and a cut-off drain diverts surface run-off.</desc>
+
+  <defs>
+    <pattern id="gravel" width="16" height="12" patternUnits="userSpaceOnUse">
+      <rect width="16" height="12" fill="#D8D8D2"/>
+      <circle cx="4" cy="4" r="2.6" fill="#A7A79E"/>
+      <circle cx="12" cy="9" r="2.2" fill="#A7A79E"/>
+      <circle cx="11" cy="3" r="1.4" fill="#BDBDB4"/>
+    </pattern>
+    <pattern id="loam" width="10" height="10" patternUnits="userSpaceOnUse">
+      <rect width="10" height="10" fill="#8B6B4A"/>
+      <circle cx="3" cy="3" r="1" fill="#6F5339"/>
+      <circle cx="8" cy="7" r="1" fill="#A3825F"/>
+    </pattern>
+    <pattern id="soil" width="12" height="12" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <rect width="12" height="12" fill="#EFE7DA"/>
+      <line x1="0" y1="0" x2="0" y2="12" stroke="#CDBFA8" stroke-width="2"/>
+    </pattern>
+    <pattern id="block" width="40" height="20" patternUnits="userSpaceOnUse">
+      <rect width="40" height="20" fill="#C9CCC8"/>
+      <path d="M0 0.5 H40 M0 10.5 H40 M20 0 V10 M0 10 V20 M40 10 V20" stroke="#9EA39E" stroke-width="1"/>
+    </pattern>
+    <marker id="arrow-air" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 z" fill="#2D6A4F"/>
+    </marker>
+    <marker id="arrow-water" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 z" fill="#2B6CB0"/>
+    </marker>
+    <marker id="tick" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="8" markerHeight="8" orient="auto">
+      <path d="M1 9 L9 1" stroke="#14281F" stroke-width="1.5"/>
+    </marker>
+  </defs>
+
+  <rect width="1200" height="960" fill="#FFFFFF"/>
+
+  <!-- Title block -->
+  <text x="40" y="44" font-size="24" font-weight="700" fill="#1B4332">Trench Pen: Drainage and Airflow Cross-Section</text>
+  <text x="40" y="70" font-size="14" fill="#3E5248">Commercial Heliculture Masterclass · Module 2 · Dimensions indicative; adapt to site, species and local building practice.</text>
+  <rect x="40" y="82" width="56" height="3" rx="1.5" fill="#D4AF37"/>
+
+  <!-- ===================== SECTION A: across the trench ===================== -->
+  <text x="40" y="118" font-size="16" font-weight="700" fill="#14281F">Section A: across the trench (to scale vertically, roof not to scale)</text>
+
+  <!-- Shade roof (not to scale) -->
+  <path d="M 250 170 L 600 150 L 950 170" fill="none" stroke="#1B4332" stroke-width="4"/>
+  <line x1="270" y1="168" x2="270" y2="240" stroke="#1B4332" stroke-width="3"/>
+  <line x1="930" y1="168" x2="930" y2="240" stroke="#1B4332" stroke-width="3"/>
+
+  <!-- Cross-ventilation airflow -->
+  <path d="M 150 205 C 300 190, 450 185, 600 190 S 900 200, 1060 205" fill="none" stroke="#2D6A4F" stroke-width="2.5" stroke-dasharray="10 6" marker-end="url(#arrow-air)"/>
+  <path d="M 380 245 C 450 230, 520 222, 560 224" fill="none" stroke="#2D6A4F" stroke-width="2" stroke-dasharray="6 5" marker-end="url(#arrow-air)"/>
+
+  <!-- Natural ground (falls away from trench) -->
+  <path d="M 40 300 L 290 290" fill="none" stroke="#6F5339" stroke-width="2"/>
+  <path d="M 910 290 L 1160 300" fill="none" stroke="#6F5339" stroke-width="2"/>
+  <path d="M 40 300 L 290 290 L 290 520 L 40 520 Z" fill="url(#soil)"/>
+  <path d="M 910 290 L 1160 300 L 1160 520 L 910 520 Z" fill="url(#soil)"/>
+
+  <!-- Block walls with raised curb (curb 10 cm above ground) -->
+  <rect x="290" y="240" width="50" height="280" fill="url(#block)" stroke="#5F7168" stroke-width="1.5"/>
+  <rect x="860" y="240" width="50" height="280" fill="url(#block)" stroke="#5F7168" stroke-width="1.5"/>
+  <!-- Concrete base slab / footing -->
+  <rect x="290" y="520" width="620" height="16" fill="#B5B9B4" stroke="#5F7168" stroke-width="1.5"/>
+
+  <!-- Gravel drainage layer (5–10 cm) -->
+  <rect x="340" y="480" width="520" height="40" fill="url(#gravel)"/>
+  <!-- Perforated drainage pipe -->
+  <circle cx="600" cy="502" r="13" fill="#FFFFFF" stroke="#2B6CB0" stroke-width="2.5" stroke-dasharray="4 3"/>
+  <!-- Separator (geotextile / fine mesh) -->
+  <line x1="340" y1="480" x2="860" y2="480" stroke="#14281F" stroke-width="2" stroke-dasharray="8 4"/>
+  <!-- Substrate (15–20 cm moist loam) -->
+  <rect x="340" y="390" width="520" height="90" fill="url(#loam)"/>
+  <!-- Moisture movement -->
+  <line x1="380" y1="408" x2="380" y2="468" stroke="#2B6CB0" stroke-width="2" marker-end="url(#arrow-water)"/>
+  <line x1="820" y1="408" x2="820" y2="468" stroke="#2B6CB0" stroke-width="2" marker-end="url(#arrow-water)"/>
+
+  <!-- Mesh lid with outward overhang, latched -->
+  <line x1="276" y1="236" x2="924" y2="236" stroke="#14281F" stroke-width="2"/>
+  <line x1="276" y1="236" x2="924" y2="236" stroke="#14281F" stroke-width="6" stroke-dasharray="1 5"/>
+  <path d="M 276 236 L 266 250" stroke="#14281F" stroke-width="2"/>
+  <path d="M 924 236 L 934 250" stroke="#14281F" stroke-width="2"/>
+  <rect x="900" y="230" width="14" height="12" rx="2" fill="#D4AF37" stroke="#14281F" stroke-width="1"/>
+
+  <!-- Optional buried mesh skirt (earth-walled trenches) -->
+  <line x1="282" y1="292" x2="282" y2="420" stroke="#14281F" stroke-width="2" stroke-dasharray="3 4"/>
+
+  <!-- Section A labels (left) -->
+  <g font-size="13" fill="#14281F">
+    <line x1="268" y1="236" x2="150" y2="236" stroke="#5F7168"/>
+    <text x="40" y="232">Latched mesh lid, overhang</text>
+    <text x="40" y="248" fill="#3E5248">3–5 mm mesh (1–2 mm nurseries)</text>
+
+    <line x1="282" y1="370" x2="242" y2="362" stroke="#5F7168"/>
+    <text x="40" y="350">Optional mesh skirt</text>
+    <text x="40" y="366" fill="#3E5248">buried 20–30 cm if walls are earth</text>
+
+    <line x1="300" y1="470" x2="150" y2="462" stroke="#5F7168"/>
+    <text x="40" y="452">Block walls, smooth-</text>
+    <text x="40" y="468" fill="#3E5248">rendered inside</text>
+
+    <line x1="300" y1="530" x2="208" y2="547" stroke="#5F7168"/>
+    <text x="40" y="552">Base slab or rammed earth</text>
+  </g>
+
+  <!-- Section A labels (centre) -->
+  <g font-size="13" fill="#14281F" text-anchor="middle">
+    <text x="600" y="142" fill="#1B4332" font-weight="600">Shade roof, 50–70 % shade net or thatch (≈1 m above lid)</text>
+    <text x="600" y="282" fill="#2D6A4F">Air space: gentle cross-ventilation, no stagnant humidity</text>
+    <text x="600" y="430" fill="#FFFFFF" font-weight="600">Moist loam substrate, pH 7–8</text>
+    <text x="600" y="458" fill="#FFFFFF">Squeeze test: moist, never waterlogged</text>
+    <text x="600" y="560" fill="#2B6CB0">Perforated drain pipe in gravel (see Section B)</text>
+  </g>
+
+  <!-- Section A dimensions (right) -->
+  <g font-size="13" fill="#14281F">
+    <line x1="1010" y1="240" x2="1010" y2="290" stroke="#14281F" marker-start="url(#tick)" marker-end="url(#tick)"/>
+    <text x="1022" y="270">Curb 10 cm above ground</text>
+
+    <line x1="1010" y1="390" x2="1010" y2="480" stroke="#14281F" marker-start="url(#tick)" marker-end="url(#tick)"/>
+    <text x="1022" y="432">Substrate 15–20 cm</text>
+
+    <line x1="1010" y1="480" x2="1010" y2="520" stroke="#14281F" marker-start="url(#tick)" marker-end="url(#tick)"/>
+    <text x="1022" y="498">Gravel 5–10 cm</text>
+    <text x="1022" y="514" fill="#3E5248">with separator above</text>
+
+    <line x1="1168" y1="290" x2="1168" y2="520" stroke="#14281F" marker-start="url(#tick)" marker-end="url(#tick)"/>
+    <text x="1180" y="405" transform="rotate(90 1180 405)" text-anchor="middle">Depth below ground ≈ 50 cm</text>
+
+    <line x1="340" y1="590" x2="860" y2="590" stroke="#14281F" marker-start="url(#tick)" marker-end="url(#tick)"/>
+    <text x="600" y="608" text-anchor="middle">Internal width 1.0–1.2 m (reachable without stepping in)</text>
+  </g>
+  <text x="1150" y="320" font-size="12" fill="#6F5339" text-anchor="end">Ground falls 1–3 % away</text>
+
+  <!-- ===================== SECTION B: along the trench ===================== -->
+  <line x1="40" y1="636" x2="1160" y2="636" stroke="#D9E2D5" stroke-width="1"/>
+  <text x="40" y="668" font-size="16" font-weight="700" fill="#14281F">Section B: along the trench (vertical scale exaggerated to show the fall)</text>
+
+  <!-- Ground surface -->
+  <path d="M 40 720 L 1160 744" fill="none" stroke="#6F5339" stroke-width="2"/>
+  <path d="M 40 720 L 1160 744 L 1160 920 L 40 920 Z" fill="url(#soil)"/>
+
+  <!-- Cut-off drain uphill -->
+  <path d="M 70 721 Q 85 744 100 722" fill="#FFFFFF" stroke="#2B6CB0" stroke-width="2"/>
+  <path d="M 30 704 C 50 704, 70 708, 82 718" fill="none" stroke="#2B6CB0" stroke-width="2" marker-end="url(#arrow-water)"/>
+
+  <!-- Trench body -->
+  <path d="M 160 722 L 900 738 L 900 868 L 160 840 Z" fill="#FFFFFF"/>
+  <!-- Substrate and gravel follow the fall -->
+  <path d="M 160 780 L 900 808 L 900 848 L 160 820 Z" fill="url(#loam)"/>
+  <path d="M 160 820 L 900 848 L 900 868 L 160 840 Z" fill="url(#gravel)"/>
+  <line x1="160" y1="820" x2="900" y2="848" stroke="#14281F" stroke-width="1.5" stroke-dasharray="8 4"/>
+  <!-- End walls -->
+  <rect x="140" y="712" width="20" height="140" fill="url(#block)" stroke="#5F7168" stroke-width="1.5"/>
+  <rect x="900" y="728" width="20" height="152" fill="url(#block)" stroke="#5F7168" stroke-width="1.5"/>
+  <!-- Base -->
+  <path d="M 140 852 L 920 880 L 920 890 L 140 862 Z" fill="#B5B9B4" stroke="#5F7168" stroke-width="1.5"/>
+  <!-- Mesh lid -->
+  <line x1="136" y1="709" x2="924" y2="725" stroke="#14281F" stroke-width="2"/>
+  <line x1="136" y1="709" x2="924" y2="725" stroke="#14281F" stroke-width="6" stroke-dasharray="1 5"/>
+  <!-- Perforated pipe along the gravel -->
+  <line x1="170" y1="831" x2="1000" y2="862" stroke="#2B6CB0" stroke-width="5" stroke-dasharray="10 4"/>
+  <!-- Meshed outlet through end wall -->
+  <rect x="917" y="848" width="8" height="22" fill="#14281F"/>
+  <!-- Soakaway pit -->
+  <rect x="990" y="840" width="130" height="70" fill="url(#gravel)" stroke="#5F7168" stroke-width="1.5"/>
+  <!-- Fall arrow -->
+  <line x1="300" y1="808" x2="560" y2="818" stroke="#2B6CB0" stroke-width="2.5" marker-end="url(#arrow-water)"/>
+
+  <!-- Section B labels -->
+  <g font-size="13" fill="#14281F">
+    <text x="30" y="696" fill="#2B6CB0">Cut-off drain diverts run-off</text>
+    <text x="440" y="772" text-anchor="middle" font-weight="600">Base falls 1–2 % to the outlet end</text>
+    <text x="440" y="790" text-anchor="middle" fill="#3E5248">(1–2 cm per metre; ≈0.5–1°)</text>
+
+    <line x1="921" y1="859" x2="960" y2="796" stroke="#5F7168"/>
+    <text x="935" y="770">Outlet screen</text>
+    <text x="935" y="786" fill="#3E5248">≤ 2 mm mesh</text>
+
+    <text x="1055" y="932" text-anchor="middle">Gravel soakaway</text>
+    <text x="1055" y="948" text-anchor="middle" fill="#3E5248">well clear of pens</text>
+  </g>
+
+  <!-- Legend -->
+  <g font-size="12" fill="#14281F">
+    <rect x="160" y="905" width="18" height="12" fill="url(#loam)"/><text x="184" y="915">Substrate (loam)</text>
+    <rect x="300" y="905" width="18" height="12" fill="url(#gravel)"/><text x="324" y="915">Gravel</text>
+    <rect x="390" y="905" width="18" height="12" fill="url(#block)"/><text x="414" y="915">Blockwork</text>
+    <line x1="500" y1="911" x2="530" y2="911" stroke="#14281F" stroke-width="2" stroke-dasharray="8 4"/><text x="536" y="915">Separator</text>
+    <line x1="620" y1="911" x2="650" y2="911" stroke="#2D6A4F" stroke-width="2.5" stroke-dasharray="10 6"/><text x="656" y="915">Airflow</text>
+    <line x1="720" y1="911" x2="750" y2="911" stroke="#2B6CB0" stroke-width="2.5"/><text x="756" y="915">Water</text>
+  </g>
+</svg>

@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Production Economics at a Glance</title>
+<style>
+  /* ---------------------------------------------------------------
+     Snail World design tokens (copy into the site stylesheet once)
+     --------------------------------------------------------------- */
+  :root {
+    --sw-forest: #1B4332;        /* brand primary */
+    --sw-forest-2: #2D6A4F;      /* brand secondary */
+    --sw-gold: #D4AF37;          /* brand accent: rules and markers only, never body text on white */
+    --sw-surface: #FFFFFF;
+    --sw-surface-2: #F4F7F2;     /* card background */
+    --sw-border: #D9E2D5;
+    --sw-ink: #14281F;           /* primary text */
+    --sw-ink-2: #3E5248;         /* secondary text */
+    --sw-ink-3: #5F7168;         /* muted text, footnotes */
+    --sw-radius: 12px;
+    --sw-font: Inter, "Helvetica Neue", Arial, sans-serif;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --sw-surface: #0F1F18;
+      --sw-surface-2: #16291F;
+      --sw-border: #2A4236;
+      --sw-ink: #EEF3EC;
+      --sw-ink-2: #C3CFC7;
+      --sw-ink-3: #9AABA1;
+    }
+  }
+  :root[data-theme="dark"] {
+    --sw-surface: #0F1F18;
+    --sw-surface-2: #16291F;
+    --sw-border: #2A4236;
+    --sw-ink: #EEF3EC;
+    --sw-ink-2: #C3CFC7;
+    --sw-ink-3: #9AABA1;
+  }
+
+  body { margin: 0; background: var(--sw-surface); color: var(--sw-ink); font-family: var(--sw-font); }
+
+  /* ---------------------------------------------------------------
+     Component: .sw-kpi-grid (3-column comparative KPI cards)
+     --------------------------------------------------------------- */
+  .sw-kpi-section { max-width: 1120px; margin: 0 auto; padding: 32px 16px; }
+  .sw-kpi-section h2 { font-size: 1.5rem; font-weight: 700; margin: 0 0 4px; }
+  .sw-kpi-section .sw-kpi-intro { color: var(--sw-ink-2); margin: 0 0 24px; font-size: 0.95rem; }
+
+  .sw-kpi-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+  .sw-kpi-card {
+    flex: 1 1 280px;             /* 3 across on desktop, stacks on narrow screens */
+    min-width: 0;
+    background: var(--sw-surface-2);
+    border: 1px solid var(--sw-border);
+    border-top: 4px solid var(--sw-gold);
+    border-radius: var(--sw-radius);
+    padding: 20px 20px 16px;
+    display: flex;
+    flex-direction: column;
+  }
+  .sw-kpi-label { font-size: 0.95rem; font-weight: 600; margin: 0; color: var(--sw-ink); }
+  .sw-kpi-def { font-size: 0.85rem; color: var(--sw-ink-3); margin: 4px 0 16px; line-height: 1.4; }
+  /* Reserve two lines so the rows line up across cards when they sit side by side */
+  @media (min-width: 900px) { .sw-kpi-def { min-height: 2.8em; } }
+
+  .sw-kpi-rows { list-style: none; margin: 0; padding: 0; flex: 1; }
+  .sw-kpi-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 12px;
+    padding: 10px 0;
+    border-top: 1px solid var(--sw-border);
+  }
+  .sw-kpi-row:first-child { border-top: 0; }
+  .sw-kpi-system { font-size: 0.9rem; color: var(--sw-ink-2); }
+  .sw-kpi-value {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--sw-ink);
+    font-variant-numeric: tabular-nums;   /* values align down the column */
+    white-space: nowrap;
+  }
+  .sw-kpi-value[data-empty] { color: var(--sw-ink-3); }
+  .sw-kpi-unit { font-size: 0.8rem; font-weight: 400; color: var(--sw-ink-3); margin-left: 4px; }
+  .sw-kpi-foot { font-size: 0.78rem; color: var(--sw-ink-3); margin: 12px 0 0; line-height: 1.4; }
+  .sw-kpi-foot code { font-size: 0.75rem; }
+  .sw-kpi-note { font-size: 0.8rem; color: var(--sw-ink-3); margin: 16px 0 0; }
+</style>
+</head>
+<body>
+
+<!-- ===============================================================
+     Snippet: paste from here to the closing </section> into a page.
+     Fill each value from the Module 3 calculator and Module 7 model.
+     Leave data-empty on a value until it has a real figure.
+     =============================================================== -->
+<section class="sw-kpi-section" aria-labelledby="sw-kpi-heading">
+  <h2 id="sw-kpi-heading">Production economics at a glance</h2>
+  <p class="sw-kpi-intro">Compare three housing systems on start-up cost, feed efficiency and margin. Figures come from your own farm model.</p>
+
+  <div class="sw-kpi-grid">
+
+    <!-- Card 1: CapEx -->
+    <article class="sw-kpi-card" aria-labelledby="kpi-capex">
+      <h3 class="sw-kpi-label" id="kpi-capex">Capital cost per m²</h3>
+      <p class="sw-kpi-def">Total set-up cost divided by productive area</p>
+      <ul class="sw-kpi-rows">
+        <li class="sw-kpi-row"><span class="sw-kpi-system">Outdoor pens</span><span class="sw-kpi-value" data-field="capex-outdoor" data-empty>—<span class="sw-kpi-unit">/m²</span></span></li>
+        <li class="sw-kpi-row"><span class="sw-kpi-system">Polytunnel</span><span class="sw-kpi-value" data-field="capex-polytunnel" data-empty>—<span class="sw-kpi-unit">/m²</span></span></li>
+        <li class="sw-kpi-row"><span class="sw-kpi-system">Indoor racks</span><span class="sw-kpi-value" data-field="capex-indoor" data-empty>—<span class="sw-kpi-unit">/m²</span></span></li>
+      </ul>
+      <p class="sw-kpi-foot">Source: Module 7 model, CapEx tab. <code>total CapEx ÷ productive m²</code></p>
+    </article>
+
+    <!-- Card 2: Feed Conversion Ratio -->
+    <article class="sw-kpi-card" aria-labelledby="kpi-fcr">
+      <h3 class="sw-kpi-label" id="kpi-fcr">Feed conversion ratio</h3>
+      <p class="sw-kpi-def">Kilograms of meal fed per kilogram of live weight gained. Lower is better</p>
+      <ul class="sw-kpi-rows">
+        <li class="sw-kpi-row"><span class="sw-kpi-system">Outdoor pens</span><span class="sw-kpi-value" data-field="fcr-outdoor" data-empty>—</span></li>
+        <li class="sw-kpi-row"><span class="sw-kpi-system">Polytunnel</span><span class="sw-kpi-value" data-field="fcr-polytunnel" data-empty>—</span></li>
+        <li class="sw-kpi-row"><span class="sw-kpi-system">Indoor racks</span><span class="sw-kpi-value" data-field="fcr-indoor" data-empty>—</span></li>
+      </ul>
+      <p class="sw-kpi-foot">Source: Module 3 calculator, Growth tab. <code>meal fed ÷ live weight gain</code></p>
+    </article>
+
+    <!-- Card 3: Projected margin -->
+    <article class="sw-kpi-card" aria-labelledby="kpi-margin">
+      <h3 class="sw-kpi-label" id="kpi-margin">Projected gross margin per m²</h3>
+      <p class="sw-kpi-def">Revenue minus variable costs, per productive m² per year</p>
+      <ul class="sw-kpi-rows">
+        <li class="sw-kpi-row"><span class="sw-kpi-system">Outdoor pens</span><span class="sw-kpi-value" data-field="margin-outdoor" data-empty>—<span class="sw-kpi-unit">/m²/yr</span></span></li>
+        <li class="sw-kpi-row"><span class="sw-kpi-system">Polytunnel</span><span class="sw-kpi-value" data-field="margin-polytunnel" data-empty>—<span class="sw-kpi-unit">/m²/yr</span></span></li>
+        <li class="sw-kpi-row"><span class="sw-kpi-system">Indoor racks</span><span class="sw-kpi-value" data-field="margin-indoor" data-empty>—<span class="sw-kpi-unit">/m²/yr</span></span></li>
+      </ul>
+      <p class="sw-kpi-foot">Source: Module 7 model, Profit tab. <code>annual gross margin ÷ productive m²</code></p>
+    </article>
+
+  </div>
+
+  <p class="sw-kpi-note">Figures are farm-specific. Enter your own quotes and confirmed buyer prices; never publish borrowed benchmarks as your results.</p>
+</section>
+<!-- =============================== end snippet =============================== -->
+
+</body>
+</html>
